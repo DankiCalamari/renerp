@@ -1,0 +1,19 @@
+{
+  "name": "erp-system",
+  "version": "1.0.0",
+  "description": "Enterprise Resource Planning System",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && uvicorn app.main:app --reload",
+    "start:frontend": "cd frontend && npm start",
+    "install:all": "npm install && cd frontend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "@docusaurus/preset-classic": "^3.7.0",
+    "@docusaurus/types": "^3.7.0",
+    "@types/node": "^22.13.9",
+    "concurrently": "^8.2.0",
+    "prism-react-renderer": "^2.4.1"
+  }
+}
